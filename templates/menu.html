@@ -28,7 +28,7 @@
 {% endblock %}
 {% block images %}
     {% for image in images %}
-      <li class="block{{ 3 if images|length == 1 else 1 }}">
+      <li class="block{{ images|length }}">
         <img alt="" src="{{ image }}">
       </li>
     {% endfor %}

@@ -67,8 +67,7 @@ data = {
       {"name":"Pasteries &amp; Sweets",
        "description":""}
     ],
-    "images": [
-    ]
+    "images": ["/images/bakery_bread.png"]
   },
   "cafe": {
     "menu_title": "Cafe",
@@ -86,8 +85,7 @@ data = {
       {"name":"Iced-Coffee To-Go",
        "description":""}
     ],
-    "images": [
-    ]
+    "images": ["/images/coffee.png"]
   },
   "restaurant": {
     "menu_title": "Restaurant",
@@ -115,8 +113,7 @@ data = {
 	 and coming Italian village
        """}
     ],
-    "images": [
-    ]
+    "images": ["/images/restaurant.png"]
   },
   "bar": {
     "menu_title": "Bar / Beverage Center",
@@ -166,8 +163,7 @@ data = {
 	 Focus on artisanal sodas &amp; non-alcoholic beverages
        """}
     ],
-    "images": [
-    ]
+    "images": ["/images/retail_shelves.png", "/images/retail_drinks.png"]
   },
   "produce": {
     "menu_title": "Produce",
@@ -191,8 +187,7 @@ data = {
 	 Consumers buy shares in a farm's harvest in advance.
        """},
     ],
-    "images": [
-    ]
+    "images": ["/images/produce.png"]
   }
 }
 
