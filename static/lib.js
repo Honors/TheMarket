@@ -119,7 +119,7 @@ var makeEditable = function() {
       evt.preventDefault(); 
       var li = baseLi.cloneNode(true);
       getAll('[data-text]', li).forEach(function(link) {
-	link.innerText = 'Edit Me';
+	link.innerText = '';
       });
       makeRemovable(li);
       list.insertBefore(li, addLi);
