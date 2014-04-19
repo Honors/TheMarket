@@ -22,9 +22,12 @@ body {
   h1 {
     position: absolute;
     left: 50%;
-    margin-left: -145px;
-    width: 200px;
-    text-align: center;
+    margin: 0;
+    margin-left: -245px;
+    width: 409px;
+    height: 79px;
+    text-indent: -9999px;
+    background: url(header.png);
   }
   #header p {
     position: absolute;
