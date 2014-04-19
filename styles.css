@@ -23,7 +23,7 @@ body {
     position: absolute;
     left: 50%;
     margin: 0;
-    margin-left: -245px;
+    margin-left: -230px;
     width: 409px;
     height: 79px;
     text-indent: -9999px;
@@ -56,7 +56,7 @@ li a:hover, li a.active {
     width: 600px;
     position: absolute;
     left: 50%;
-    margin-left: -365px;
+    margin-left: -350px;
   }
   #nav ul li {
     display: inline;
@@ -92,12 +92,35 @@ li a:hover, li a.active {
   #content {
     box-sizing: border-box;
     padding: 20px;
-    border: 1px solid #333;
+    border: 2px solid #A7ACAB;
+    outline: 2px solid #EEEFF0;
     margin-top: 20px;
-    width: 498px;
+    width: 522px;
+    position: relative;
+    }
+    #content:before, #content:after {
+      content: '';
+      width: 20px;
+      height: 20px;
+      display: block;
+      position: absolute;
+      margin-top: -4px;
+      margin-left: -4px;
+      top: 0;
+      left: 0;
+      background: url(cornerTL.png);
+    }
+    #content:after {
+      margin: 0;
+      left: auto;
+      right: 0;
+      margin-top: -4px;
+      margin-right: -4px;
+      background: url(cornerTR.png);
     }
     #content h2 {
       margin: 0;
+      font-size: 1.8em;
       text-align: center;
       font-family: 'Parisienne', cursive;
     }
@@ -135,6 +158,15 @@ li a:hover, li a.active {
       }
   #sidebar {
     padding-top: 40px;
-    width: 220px;
-  }
+    width: 190px;
+    }
+    #sidebar li {
+      width: 200px;
+      height: 150px;
+      overflow: hidden;
+    }
+    #sidebar img {
+      width: 200px;
+    }
+
 
