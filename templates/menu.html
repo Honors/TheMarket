@@ -18,39 +18,13 @@
      will have a focus on European style meats and cheeses as well as
      those from the local market.</p>
   <ul>
-    <li><h3>Fresh cut deli meats</h3></li>
-    <li><h3>House-made sauces &amp; toppings</h3>
-	<span class="desc">
-	  Available for retail. Sell at other retail stores.
-	</span>
-    <li><h3>Artisanal cheeses</h3>
-	<span class="desc">
-	  Local &amp; International. Available for retail.
-	</span>
-    </li>
-    <li><h3>Daily specials</h3>
-	<span class="desc">
-	  Daily market-fresh fish &amp; meats.
-	</span>
-    </li>
-    <li><h3>Artisanal Pizza</h3>
-	<span class="desc">
-	  Hand-made Sicilian style pizza with hand-picked toppings.<br>
-	  Available all day &amp; Take 'n Bake program.<br>
-	  Sell at other retail locations.
-	</span>
-    </li>
-    <li><h3>Salad Station</h3>
-	<span class="desc">
-	  Salad bar &amp; Build your own &amp; Take home.<br>
-	  Fresh grown produce locally sourced or home-grown when possible.
-	</span>
-    </li>
-    <li><h3>Sandwiches</h3>
-	<span class="desc">
-	  Original deli sandwich selection with daily specials.
-	</span>
-    </li>
+    {% for item in items %}
+      <li><h3>{{ item.name|safe }}</h3>
+	  <span class="desc">
+	    {{ item.description|safe }}
+	  </span>
+      </li>
+    {% endfor %}
   </ul>
 {% endblock %}
 {% block images %}
