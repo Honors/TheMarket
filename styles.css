@@ -22,7 +22,7 @@ body {
   h1 {
     position: absolute;
     left: 50%;
-    margin-left: -100px;
+    margin-left: -145px;
     width: 200px;
     text-align: center;
   }
@@ -31,17 +31,34 @@ body {
     right: 0;
   }
 #nav {
-  width: 600px;
+  width: 100%;
   text-align: center;
-  margin: auto;
+  position: relative;
+  height: 20px;
+  border: 1px solid #333;
+  border-width: 1px 0 1px 0;
+  padding: 7px 0;
   }
   #nav ul {
     margin: 0;
+    width: 600px;
+    position: absolute;
+    left: 50%;
+    margin-left: -365px;
   }
   #nav ul li {
     display: inline;
     margin-right: 10px;
-  }
+    }
+    #nav li a {
+      color: #333;
+      text-decoration: none;
+    }
+    #nav li a:hover {
+      color: #FF4350;
+      pointer: clicker;
+      text-decoration: none;
+    }
 #body {
   float: left;
   }
@@ -73,7 +90,22 @@ body {
     }
     #content h2 {
       margin: 0;
+      text-align: center;
     }
+    #content ul {
+      text-align: center;
+      }
+      #content ul li {
+        margin-bottom: 10px;
+      }
+      #content ul li h3 {
+        margin: 0;
+	font-weight: normal;
+	font-size: 1.2em;
+      }
+      #content ul li .desc {
+	font-size: 0.8em;
+      }
   #sidebar {
     padding-top: 40px;
     width: 220px;
