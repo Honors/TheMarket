@@ -30,6 +30,14 @@ body {
     position: absolute;
     right: 0;
   }
+li a {
+  color: #333;
+  text-decoration: none;
+  pointer: clicker;
+}
+li a:hover, li a.active {
+  color: #FF4350;
+}
 #nav {
   width: 100%;
   text-align: center;
@@ -49,15 +57,6 @@ body {
   #nav ul li {
     display: inline;
     margin-right: 10px;
-    }
-    #nav li a {
-      color: #333;
-      text-decoration: none;
-    }
-    #nav li a:hover {
-      color: #FF4350;
-      pointer: clicker;
-      text-decoration: none;
     }
 #body {
   float: left;
@@ -94,6 +93,21 @@ body {
     }
     #content ul {
       text-align: center;
+      }
+      #content > p {
+	display: block;
+	width: 400px;
+	text-align: center;
+	margin: auto;
+	font-size: 0.7em;
+	margin-top: 10px;
+	margin-bottom: 10px;
+      }
+      #content ul li h3:before  {
+        content: '• ';
+      }
+      #content ul li h3:after {
+        content: ' •';
       }
       #content ul li {
         margin-bottom: 10px;
