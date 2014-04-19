@@ -1,22 +1,26 @@
+def getData():
+  return data
+def setData(d):
+  data = d
 data = {
   "service": {
     "items": [
       {"name": "Daytime = self-serve",
        "description": """
-         Walk up ordering. Food will be brought to tables.<br>
+	 Walk up ordering. Food will be brought to tables.<br>
 	 Bussers working/cleaning open to close
        """},
       {"name": "Dinner Service",
        "description": """
-         THE CREST GASTROPUB STYLE
-	 (5pm-10pm weekdays)
+	 THE CREST GASTROPUB STYLE<br>
+	 (5pm-10pm weekdays)<br>
 	 Table Service / Host / Bussers
 	"""},
       {"name": "Weekend brunch &amp; dinner",
        "description": "Full table service all day"},
       {"name": "Stations",
        "description": """
-         All stations will have specific employees ready to serve our customers<br>
+	 All stations will have specific employees ready to serve our customers<br>
 	 Butcher / Deli Station | Pizza / pasta / salad | Cafe / bar / check-out station
        """}]
   },
@@ -33,7 +37,7 @@ data = {
        "description": "birthdays / graduations / holidays etc."},
       {"name": "Seasonal holiday catered meals",
        "description": """
-         Providing full holiday meals<br>
+	 Providing full holiday meals<br>
 	 All catering menu items will be made at Cafe Del Mondo
        """}]
   },
@@ -45,7 +49,7 @@ data = {
       {"name": "Commitment to collaborate with food business &amp; farmers",
        "description": ""},
       {"name": "Community Engagement",
-        "description": ""},
+	"description": ""},
       {"name": "Education",
        "description": ""}]
   },
@@ -187,8 +191,7 @@ data = {
 	   Available by the glass or by the bottle
 	 """}
       ],
-      "images": [
-      ]
+      "images": ["/images/retail_drinks.png"]
     },
     "retail": {
       "menu_title": "Retail",

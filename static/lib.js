@@ -1,10 +1,74 @@
-var makeEditable = function() {
-  var getAll = function(q, ctx) {
-    return [].slice.call((ctx||document).querySelectorAll(q));
-  };
+var update = function(patch) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', '/update', true);
+  xhr.onload = function () {};
+  xhr.send(JSON.stringify(patch));
+};
+var getAll = function(q, ctx) {
+  return [].slice.call((ctx||document).querySelectorAll(q));
+};
+var setPath = function(obj, path, value) {
+  if( path.length == 1 ) {
+    obj[path[0]] = value;
+  } else {
+    obj[path[0]] = obj[path[0]] || (typeof path[1] == 'number' ? [] : {});
+    setPath(obj[path[0]], path.slice(1), value);
+  }
+};
+var cleanArrays = function(obj) {
+  if( typeof obj == 'object' ) {
+    if( obj instanceof Array ) {
+      return obj.filter(function(x) {
+        return typeof x != 'undefined';
+      }).map(cleanArrays);
+    } else {
+      var b = {};
+      for( var k in obj ) {
+        b[k] = cleanArrays(obj[k]);
+      }
+      return b;
+    }
+  } else {
+    return obj;
+  }
+};
+var serialize = function() {
   var lists = getAll('[data-list]'),
       textNodes = getAll('[data-text]'),
       images = getAll('[data-src]');
+  var obj = {};
+  textNodes.forEach(function(txt) {
+    var path = txt.dataset.text,
+        comps = path.match(/\[[^\]]+\]/g).map(function(x) {
+	  return x.substr(1, x.length - 2);
+	}).map(function(x) {
+	  return x.match(/^[0-9]+$/) ? parseInt(x, 10) : x;
+	});
+    setPath(obj, comps, txt.innerHTML);
+  });
+  obj = cleanArrays(obj);
+  return obj;
+};
+var makeEditable = function() {
+  var lists = getAll('[data-list]'),
+      textNodes = getAll('[data-text]'),
+      images = getAll('[data-src]');
+  var toolbar = document.createElement('div');
+  toolbar.style.position = 'fixed';
+  toolbar.style.bottom = 0;
+  toolbar.style.left = 0;
+  toolbar.style.width = '100%';
+  toolbar.style.height = '50px';
+  toolbar.style.background = '#333';
+  var saveBtn = document.createElement('button');
+  saveBtn.innerText = 'Save';
+  saveBtn.addEventListener('click', function(evt) {
+    evt.preventDefault();
+    update(serialize());
+  });
+  toolbar.appendChild(saveBtn);
+  document.body.appendChild(toolbar);
+
   textNodes.forEach(function(txt) {
     txt.contentEditable = true;
   });
@@ -56,4 +120,5 @@ var makeEditable = function() {
     list.appendChild(addLi);
   });
 };
+makeEditable();
 
