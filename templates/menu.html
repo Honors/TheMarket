@@ -14,12 +14,12 @@
   </ul>
 {% endblock %}
 {% block content %}
-  <h2 data-link="[{{ menu_key }}][menu_title]">{{ menu_title }}</h2>
-  <p data-link="[{{ menu_key }}][summary]">{{ summary|safe }}</p>
-  <ul>
+  <h2 data-text="[{{ menu_key }}][menu_title]">{{ menu_title }}</h2>
+  <p data-text="[{{ menu_key }}][summary]">{{ summary|safe }}</p>
+  <ul data-list="[{{ menu_key }}][items]">
     {% for item in items %}
-      <li><h3 data-link="[{{ menu_key }}][items][{{ loop.index - 1 }}][name]">{{ item.name|safe }}</h3>
-	  <span class="desc" data-link="[{{ menu_key }}][items][{{ loop.index - 1 }}][description]">
+      <li><h3 data-text="[{{ menu_key }}][items][{{ loop.index - 1 }}][name]">{{ item.name|safe }}</h3>
+	  <span class="desc" data-text="[{{ menu_key }}][items][{{ loop.index - 1 }}][description]">
 	    {{ item.description|safe }}
 	  </span>
       </li>
@@ -27,10 +27,12 @@
   </ul>
 {% endblock %}
 {% block images %}
+  <ul data-list="[{{ menu_key }}][images]">
     {% for image in images %}
       <li class="block{{ images|length }}">
-        <img alt="" data-link="[{{ menu_key }}][images][{{ loop.index - 1 }}]" src="{{ image }}">
+        <img alt="" data-src="[{{ menu_key }}][images][{{ loop.index - 1 }}]" src="{{ image }}">
       </li>
     {% endfor %}
+  </ul>
 {% endblock %}
 
