@@ -24,18 +24,20 @@
 	</ul>
       </div>
       <div id="body">
-        <div id="links">
-	  {% block links %}{% endblock %}
-	</div>
-	<div id="content">
-	  {% block content %}{% endblock %}
-	</div>
-	<div id="sidebar">
-	  {% block images %}{% endblock %}
-	</div>
+        {% block body %}
+	  <div id="links">
+	    {% block links %}{% endblock %}
+	  </div>
+	  <div id="content">
+	    {% block content %}{% endblock %}
+	  </div>
+	  <div id="sidebar">
+	    {% block images %}{% endblock %}
+	  </div>
+	{% endblock %}
       </div>
       <div id="footer">
-        <ul>
+	<ul>
 	  <li><a href="#" id="edit">Edit</a></li>
 	  <li><a href="#">Legal</a></li>
 	  <li><a href="#">Contact</a></li>

@@ -15,11 +15,14 @@ body {
   margin-left: -450px;
   padding-bottom: 100px;
 }
+#hero-wrapper {
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+  float: left;
+}
 #hero {
   height: 100%;
-  margin-top: -30px;
-  margin-left: -100px;
-  position: relative;
 }
 #header {
   width: 100%;
@@ -73,6 +76,8 @@ li a:hover, li.active a {
     }
 #body {
   float: left;
+  position: relative;
+  width: 100%;
   }
   #body > div {
     float: left;
@@ -217,6 +222,9 @@ li a:hover, li.active a {
     left: 0;
     top: 0;
   }
+  #hero-wrapper {
+    height: 700px;
+  }
   #content {
     width: 50%;
   }
@@ -239,6 +247,9 @@ li a:hover, li.active a {
   }
 }
 @media (max-width: 600px) {
+  #hero-wrapper {
+    height: 500px;
+  }
   #links {
     width: 100%;
     padding: 10px 0;
@@ -277,8 +288,17 @@ li a:hover, li.active a {
   #content {
     width: 100%;
   }
+  #hero-wrapper {
+    height: 350;
+  }
   #sidebar {
     width: 100%;
+    }
+    #sidebar li.block1 {
+      height: 150px;
+    }
+    #sidebar li.block2:last-of-type {
+      height: 150px;
     }
     #sidebar li {
       width: 33%;
