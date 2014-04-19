@@ -20,6 +20,35 @@ data = {
 	 Butcher / Deli Station | Pizza / pasta / salad | Cafe / bar / check-out station
        """}]
   },
+  "catering": {
+    "summary": """
+      Catering is not only taking your restaurant market outside of the box,
+      but also another way to help promote and expand our brand throughout our
+      city.
+    """,
+    "items": [
+      {"name": "Delivery Services",
+       "description": ""},
+      {"name": "Special events menus",
+       "description": "birthdays / graduations / holidays etc."},
+      {"name": "Seasonal holiday catered meals",
+       "description": """
+         Providing full holiday meals<br>
+	 All catering menu items will be made at Cafe Del Mondo
+       """}]
+  },
+  "events": {
+    "summary": """
+      Continue our commitment to be a part of our community.
+    """,
+    "items": [
+      {"name": "Commitment to collaborate with food business &amp; farmers",
+       "description": ""},
+      {"name": "Community Engagement",
+        "description": ""},
+      {"name": "Education",
+       "description": ""}]
+  },
   "menus": {
     "butcher": {
       "menu_title": "Butcher",
@@ -138,7 +167,7 @@ data = {
       "images": ["/images/restaurant.png"]
     },
     "bar": {
-      "menu_title": "Bar / Beverage Center",
+      "menu_title": "Bar",
       "summary": """
 	Being consistent with our business model at The Market, our bar service
 	will consist of artisah cocktails, craft beers, &amp; worldly wines

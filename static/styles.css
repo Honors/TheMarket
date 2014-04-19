@@ -39,7 +39,7 @@ li a {
   text-decoration: none;
   pointer: clicker;
 }
-li a:hover, li a.active {
+li a:hover, li.active a {
   color: #FF4350;
 }
 #nav {

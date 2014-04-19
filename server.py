@@ -1,5 +1,4 @@
-from flask import Flask
-from flask import render_template
+from flask import Flask, render_template, redirect
 from data import data
 app = Flask(__name__, static_url_path='')
 
@@ -11,6 +10,22 @@ def main():
 def service():
   return render_template('service.html',
     items=data["service"]["items"])
+
+@app.route('/events')
+def events():
+  return render_template('events.html',
+    summary=data["events"]["summary"],
+    items=data["events"]["items"])
+
+@app.route('/catering')
+def catering():
+  return render_template('catering.html',
+    summary=data["catering"]["summary"],
+    items=data["catering"]["items"])
+
+@app.route('/menus')
+def menus():
+  return redirect('/menu/deli')
 
 @app.route('/menu/<menu>')
 def menu(menu):

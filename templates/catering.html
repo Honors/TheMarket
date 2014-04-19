@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2>Catering</h2>
+  <p data-text="[catering][summary]">{{ summary }}</p>
+  <ul data-list="[catering][items]">
+    {% for item in items %}
+      <li><h3 data-text="[catering][items][{{ loop.index - 1 }}][name]">{{ item.name|safe }}</h3>
+	  <span class="desc" data-text="[catering][items][{{ loop.index - 1 }}][description]">
+	    {{ item.description|safe }}
+	  </span>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+
