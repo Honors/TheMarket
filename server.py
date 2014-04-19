@@ -5,6 +5,12 @@ app = Flask(__name__, static_url_path='')
 @app.route('/')
 def main():
   return render_template('menu.html',
+    menu_title="Deli",
+    summary="""
+      Offering a large array of artisan deli meats &amp; cheeses, we 
+      will have a focus on European style meats and cheeses as well as
+      those from the local market.
+    """,
     items=[
       {"name":"Fresh cut deli meats",
        "description":""},
