@@ -175,5 +175,8 @@ li a:hover, li.active a {
     #sidebar img {
       width: 200px;
     }
+.editable:before {
+  content: '»';
+}
 
 

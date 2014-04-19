@@ -2,7 +2,7 @@
 {% block title %}The Market | {{ menu_title }} Menu{% endblock %}<
 {% block links %}
   <h2>Menus</h2>
-  <ul data-list="[menus]">
+  <ul>
     {% for key, menu in menus|dictsort(false, 'value') %}
     <li class="{{ 'active' if key == menu_key else '' }}">
       <a data-text="[menus][{{ key }}][menu_title]" href="/menu/{{ key }}">{{ menu.menu_title }}</a>

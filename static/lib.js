@@ -71,6 +71,7 @@ var makeEditable = function() {
 
   textNodes.forEach(function(txt) {
     txt.contentEditable = true;
+    txt.className += " editable";
   });
   images.forEach(function(image) {
     var upload = document.createElement('button');

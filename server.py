@@ -32,6 +32,7 @@ def service():
 
 @app.route('/events')
 def events():
+  data = getData()
   return render_template('events.html',
     summary=data["events"]["summary"],
     items=data["events"]["items"])
