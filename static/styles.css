@@ -97,6 +97,7 @@ li a:hover, li a.active {
     margin-top: 20px;
     width: 522px;
     position: relative;
+    min-height: 520px;
     }
     #content:before, #content:after {
       content: '';
@@ -164,6 +165,9 @@ li a:hover, li a.active {
       width: 200px;
       height: 150px;
       overflow: hidden;
+    }
+    #sidebar li.block3 {
+      height: 450px;
     }
     #sidebar img {
       width: 200px;
