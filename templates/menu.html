@@ -54,8 +54,8 @@
   </ul>
 {% endblock %}
 {% block images %}
-    <li><img alt="" src="pasta.png"></li>
-    <li><img alt="" src="pizza.png"></li>
-    <li><img alt="" src="bread.png"></li>
+    {% for image in images %}
+      <li><img alt="" src="{{ image }}"></li>
+    {% endfor %}
 {% endblock %}
 
