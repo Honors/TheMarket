@@ -29,6 +29,7 @@ body {
   h1 {
     position: absolute;
     left: 50%;
+    color: #333;
     margin: 0;
     margin-left: -230px;
     width: 409px;
@@ -86,6 +87,9 @@ li a:hover, li.active a {
     padding: 20px;
     padding-top: 40px;
     width: 140px;
+    }
+    #links .drop-down-nav {
+      display: none;
     }
     #links h2 {
       margin: 0;
@@ -206,5 +210,79 @@ li a:hover, li.active a {
 .editable:before, #content ul li h3.editable:before {
   content: '»';
 }
+@media (max-width: 899px) {
+  #wrapper {
+    width: 100%;
+    margin: 0;
+    left: 0;
+    top: 0;
+  }
+  #content {
+    width: 50%;
+  }
+  #links {
+    width: 20%;
+  }
+  #sidebar {
+    width: 30%;
+  }
+  #sidebar {
+    padding-top: 20px;
+  }
+  #sidebar li {
+    width: 100%;
+    padding-left: 20px;
+    box-sizing: border-box;
+  }
+  #content > p {
+    width: 90%;
+  }
+}
+@media (max-width: 600px) {
+  #links {
+    width: 100%;
+    padding: 10px 0;
+    }
+    #links * {
+      display: none;
+    }
+    #links .drop-down-nav {
+      display: block;
+      width: 100%;
+    }
+  #content {
+    width: 70%
+  }
+  #sidebar {
+    width: 30%;
+  }
+  #header {
+    height: 50px;
+    }
+    #header p {
+      display: none;
+    }
+    #header h1 {
+      background: none;
+      text-indent: 0;
+      padding: 0;
+      margin-left: -100px;
+      width: 200px;
+      font-family: 'Old Standard', serif;
+      text-align: center;
+    }
+}
 
-
+@media (max-width: 450px) {
+  #content {
+    width: 100%;
+  }
+  #sidebar {
+    width: 100%;
+    }
+    #sidebar li {
+      width: 33%;
+      float: left;
+      padding: 0;
+    }
+}
