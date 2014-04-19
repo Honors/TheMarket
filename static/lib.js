@@ -128,11 +128,13 @@ var makeEditable = function() {
     list.appendChild(addLi);
   });
 };
-document.getElementById('edit').addEventListener('click', function(evt) {
+var editBtn = document.getElementById('edit');
+editBtn && editBtn.addEventListener('click', function(evt) {
   evt.preventDefault();
   makeEditable();
 });
-document.getElementById('menu_dropdown').addEventListener('change', function(evt) {
+var menuDropdown = document.getElementById('menu_dropdown');
+menuDropdown && menuDropdown.addEventListener('change', function(evt) {
   evt.preventDefault();
   location.href = '/menu/'+this.value;
 });
