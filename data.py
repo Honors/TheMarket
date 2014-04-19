@@ -28,7 +28,7 @@ data = {
        """},
       {"name":"Sandwiches",
        "description":"Original deli sandwich selection with daily specials."}],
-     "images": ["pasta.png", "pizza.png", "bread.png"]
+     "images": ["/images/pasta.png", "/images/pizza.png", "/images/bread.png"]
   }
 }
 

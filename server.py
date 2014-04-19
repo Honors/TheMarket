@@ -5,16 +5,16 @@ app = Flask(__name__, static_url_path='')
 
 @app.route('/')
 def main():
-  return "Hello"
+  return render_template('home.html')
 
 @app.route('/menu/<menu>')
 def menu(menu):
-  data = data[menu]
+  d = data[menu]
   return render_template('menu.html',
-    menu_title=data["menu_title"],
-    summary=data["summary"],
-    items=data["items"],
-    images=data["images"])
+    menu_title=d["menu_title"],
+    summary=d["summary"],
+    items=d["items"],
+    images=d["images"])
 
-app.run(host='0.0.0.0')
+app.run(host='0.0.0.0', debug=True)
 
