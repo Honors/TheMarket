@@ -118,7 +118,13 @@ var makeEditable = function() {
     btn.addEventListener('click', function(evt) {
       evt.preventDefault(); 
       var li = baseLi.cloneNode(true);
+      var base = list.dataset.list;
       getAll('[data-text]', li).forEach(function(link) {
+	var rest = link.dataset.text.substr(base.length);
+	var lis = getAll('li', list);
+	var last = getAll('[data-text]', lis[lis.length - 2])[0]; // exclude add button
+	var lastIndex = parseInt(last.dataset.text.substr(last.length).match(/\[([0-9]+)\]/)[1], 10);
+	link.dataset.text = base + rest.replace(/\[[0-9]+\]/, '['+(lastIndex+1)+']');
 	link.innerText = '';
       });
       makeRemovable(li);
