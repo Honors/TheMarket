@@ -1,39 +1,20 @@
 from flask import Flask
 from flask import render_template
+from data import data
 app = Flask(__name__, static_url_path='')
 
 @app.route('/')
 def main():
+  return "Hello"
+
+@app.route('/menu/<menu>')
+def menu(menu):
+  data = data[menu]
   return render_template('menu.html',
-    menu_title="Deli",
-    summary="""
-      Offering a large array of artisan deli meats &amp; cheeses, we 
-      will have a focus on European style meats and cheeses as well as
-      those from the local market.
-    """,
-    items=[
-      {"name":"Fresh cut deli meats",
-       "description":""},
-      {"name":"House-made sauces &amp; toppings",
-       "description":"Available for retail. Sell at other retail stores."},
-      {"name":"Artisanal cheeses",
-       "descritption":"Local &amp; International. Available for retail."},
-      {"name":"Daily specials",
-       "description":"Daily market-fresh fish &amp; meats."},
-      {"name":"Artisanal Pizza",
-       "description":"""
-	  Hand-made Sicilian style pizza with hand-picked toppings.<br>
-	  Available all day &amp; Take 'n Bake program.<br>
-	  Sell at other retail locations.
-	"""},
-      {"name":"Salad Station",
-       "description":"""
-	  Salad bar &amp; Build your own &amp; Take home.<br>
-	  Fresh grown produce locally sourced or home-grown when possible.
-       """},
-      {"name":"Sandwiches",
-       "description":"Original deli sandwich selection with daily specials."}],
-    images=["pasta.png", "pizza.png", "bread.png"])
+    menu_title=data["menu_title"],
+    summary=data["summary"],
+    items=data["items"],
+    images=data["images"])
 
 app.run(host='0.0.0.0')
 
