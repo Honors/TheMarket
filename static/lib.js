@@ -66,7 +66,14 @@ var makeEditable = function() {
     evt.preventDefault();
     update(serialize());
   });
+  var doneBtn = document.createElement('button');
+  doneBtn.innerText = 'Exit';
+  doneBtn.addEventListener('click', function(evt) {
+    evt.preventDefault();
+    location.href = location.href;
+  });
   toolbar.appendChild(saveBtn);
+  toolbar.appendChild(doneBtn);
   document.body.appendChild(toolbar);
 
   textNodes.forEach(function(txt) {
@@ -121,5 +128,8 @@ var makeEditable = function() {
     list.appendChild(addLi);
   });
 };
-makeEditable();
+document.getElementById('edit').addEventListener('click', function(evt) {
+  evt.preventDefault();
+  makeEditable();
+});
 

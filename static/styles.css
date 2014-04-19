@@ -175,7 +175,27 @@ li a:hover, li.active a {
     #sidebar img {
       width: 200px;
     }
-.editable:before {
+#footer {
+  width: 100%;
+  text-align: center;
+  background: #ccc;
+  padding: 30px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 12px;
+}
+#footer ul {
+  margin: 0;
+  padding: 0;
+  margin-left: -45px;
+}
+#footer ul li {
+  display: inline;
+  margin-right: 6px;
+}
+.editable:before, #content ul li h3.editable:before {
   content: '»';
 }
 
