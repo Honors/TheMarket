@@ -132,4 +132,8 @@ document.getElementById('edit').addEventListener('click', function(evt) {
   evt.preventDefault();
   makeEditable();
 });
+document.getElementById('menu_dropdown').addEventListener('change', function(evt) {
+  evt.preventDefault();
+  location.href = '/menu/'+this.value;
+});
 

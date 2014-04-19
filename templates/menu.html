@@ -2,9 +2,9 @@
 {% block title %}The Market | {{ menu_title }} Menu{% endblock %}<
 {% block links %}
   <h2>Menus</h2>
-  <select class="drop-down-nav">
+  <select class="drop-down-nav" id="menu_dropdown" value="{{ menu_key }}">
     {% for key, menu in menus|dictsort(false, 'value') %}
-    <option data-text="[menus][{{ key }}][menu_title]">{{ menu.menu_title }}</option>
+    <option value="{{ key }}" data-text="[menus][{{ key }}][menu_title]"{{ ' selected' if menu_key == key else '' }}>{{ menu.menu_title }}</option>
     {% endfor %}
   </select>
   <ul>
