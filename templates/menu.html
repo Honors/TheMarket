@@ -2,21 +2,21 @@
 {% block title %}The Market | {{ menu_title }} Menu{% endblock %}<
 {% block links %}
   <h2>Menus</h2>
-  <ul data-list="">
+  <ul data-list="[menus]">
     {% for menu_key, menu in menus.iteritems() %}
     <li>
-      <a data-text="[{{ menu_key }}][menu_title]" href="/menu/{{ menu_key }}">{{ menu.menu_title }}</a>
+      <a data-text="[menus][{{ menu_key }}][menu_title]" href="/menu/{{ menu_key }}">{{ menu.menu_title }}</a>
     </li>
     {% endfor %}
   </ul>
 {% endblock %}
 {% block content %}
-  <h2 data-text="[{{ menu_key }}][menu_title]">{{ menu_title }}</h2>
-  <p data-text="[{{ menu_key }}][summary]">{{ summary|safe }}</p>
-  <ul data-list="[{{ menu_key }}][items]">
+  <h2 data-text="[menus][{{ menu_key }}][menu_title]">{{ menu_title }}</h2>
+  <p data-text="[menus][{{ menu_key }}][summary]">{{ summary|safe }}</p>
+  <ul data-list="[menus][{{ menu_key }}][items]">
     {% for item in items %}
-      <li><h3 data-text="[{{ menu_key }}][items][{{ loop.index - 1 }}][name]">{{ item.name|safe }}</h3>
-	  <span class="desc" data-text="[{{ menu_key }}][items][{{ loop.index - 1 }}][description]">
+      <li><h3 data-text="[menus][{{ menu_key }}][items][{{ loop.index - 1 }}][name]">{{ item.name|safe }}</h3>
+	  <span class="desc" data-text="[menus][{{ menu_key }}][items][{{ loop.index - 1 }}][description]">
 	    {{ item.description|safe }}
 	  </span>
       </li>
@@ -24,10 +24,10 @@
   </ul>
 {% endblock %}
 {% block images %}
-  <ul data-list="[{{ menu_key }}][images]">
+  <ul data-list="[menus][{{ menu_key }}][images]">
     {% for image in images %}
       <li class="block{{ images|length }}">
-        <img alt="" data-src="[{{ menu_key }}][images][{{ loop.index - 1 }}]" src="{{ image }}">
+        <img alt="" data-src="[menus][{{ menu_key }}][images][{{ loop.index - 1 }}]" src="{{ image }}">
       </li>
     {% endfor %}
   </ul>

@@ -7,11 +7,16 @@ app = Flask(__name__, static_url_path='')
 def main():
   return render_template('home.html')
 
+@app.route('/service')
+def service():
+  return render_template('service.html',
+    items=data["service"]["items"])
+
 @app.route('/menu/<menu>')
 def menu(menu):
-  d = data[menu]
+  d = data["menus"][menu]
   return render_template('menu.html',
-    menus=data,
+    menus=data["menus"],
     menu_key=menu,
     menu_title=d["menu_title"],
     summary=d["summary"],

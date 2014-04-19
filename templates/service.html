@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2>Service</h2>
+  <ul data-list="[service][items]">
+    {% for item in items %}
+      <li><h3 data-text="[service][items][{{ loop.index - 1 }}][name]">{{ item.name|safe }}</h3>
+	  <span class="desc" data-text="[service][items][{{ loop.index - 1 }}][description]">
+	    {{ item.description|safe }}
+	  </span>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+
