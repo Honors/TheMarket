@@ -11,6 +11,7 @@ def main():
 def menu(menu):
   d = data[menu]
   return render_template('menu.html',
+    menu_key=menu,
     menu_title=d["menu_title"],
     summary=d["summary"],
     items=d["items"],
