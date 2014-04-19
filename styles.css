@@ -32,6 +32,7 @@ body {
   #header p {
     position: absolute;
     right: 0;
+    font-family: 'Old Standard', serif;
   }
 li a {
   color: #333;
@@ -60,6 +61,7 @@ li a:hover, li a.active {
   #nav ul li {
     display: inline;
     margin-right: 10px;
+    font-family: 'Alegreya SC', serif;
     }
 #body {
   float: left;
@@ -82,6 +84,10 @@ li a:hover, li a.active {
       margin: 0;
       font-size: 1.2em;
       padding-bottom: 10px;
+      font-family: 'Alegreya SC', serif;
+    }
+    #links ul {
+      font-family: 'Old Standard', serif;
     }
   #content {
     box-sizing: border-box;
@@ -93,18 +99,22 @@ li a:hover, li a.active {
     #content h2 {
       margin: 0;
       text-align: center;
+      font-family: 'Parisienne', cursive;
+    }
+    #content > p {
+      display: block;
+      width: 400px;
+      text-align: center;
+      margin: auto;
+      font-size: 0.7em;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-style: italic;
     }
     #content ul {
       text-align: center;
-      }
-      #content > p {
-	display: block;
-	width: 400px;
-	text-align: center;
-	margin: auto;
-	font-size: 0.7em;
-	margin-top: 10px;
-	margin-bottom: 10px;
+      font-family: 'Old Standard', serif;
       }
       #content ul li h3:before  {
         content: '• ';
