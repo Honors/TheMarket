@@ -60,5 +60,5 @@ def menu(menu):
     items=d["items"],
     images=d["images"])
 
-app.run(host='0.0.0.0', debug=True)
+app.run(host='0.0.0.0', port=3084, debug=True)
 
